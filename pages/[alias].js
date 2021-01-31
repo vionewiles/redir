@@ -14,7 +14,7 @@ export default function alias({children, alias}) {
 
       if( path == `/${alias}` ) {
 		 setRedirectLink(target)
-		 return document.getElementById('redirector').click();
+		 setTimeout(() => document.getElementById('redirector').click(), 500);
       }
     }
 
