@@ -1,8 +1,9 @@
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 
 export default function alias({children, alias}) {
 
   const fs = require('../link.json')
+  const [redirectLink, setRedirectLink] = setState(false)
 
 
   const redirect = (json) => {
@@ -12,7 +13,8 @@ export default function alias({children, alias}) {
       const { alias, target } = json[index]
 
       if( path == `/${alias}` ) {
-        return window.top.location.replace(target)
+		 setRedirectLink(target)
+		 return document.getElementById('redirector').click();
       }
     }
 
@@ -24,6 +26,6 @@ export default function alias({children, alias}) {
   }, [fs])
 
   return (
-    <div>...</div>
+    <a id="redirector"	rel="noreferrer"  style="text-decoration:none;color:fff;" href={redirectLink}>...</div>
   )
 }
