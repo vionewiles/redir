@@ -26,6 +26,6 @@ export default function alias({children, alias}) {
   }, [fs])
 
   return (
-    <a id="redirector"	rel="noreferrer"  style="text-decoration:none;color:fff;" href={redirectLink}>...</div>
+    <a id="redirector"	rel="noreferrer"  style="text-decoration:none;color:fff;" href={redirectLink}>...</a>
   )
 }
