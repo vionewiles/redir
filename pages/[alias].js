@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react'
 export default function alias({children, alias}) {
 
   const fs = require('../link.json')
-  const [redirectLink, setRedirectLink] = setState(false)
+  const [redirectLink, setRedirectLink] = useState(false)
 
 
   const redirect = (json) => {
